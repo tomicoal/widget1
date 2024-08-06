@@ -1,16 +1,40 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+import tkinter as tk
+from tkinter import ttk
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+# Function
+
+def convert():
+    mile_int = entry_float.get()
+    kilometer_float = f"{mile_int * 1.60934:.2f}"
+    output_string.set(f"{kilometer_float} km")
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+# create main window
+window = tk.Tk()
+window.title("Demo")
+window.geometry("300x150")
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# Title
+title_label = ttk.Label(master=window, text="Miles to kilometres", font="Calibri 24 bold")
+title_label.pack()
+
+# input field
+input_frame = ttk.Frame(master=window)
+entry_float = tk.DoubleVar()
+entry = ttk.Entry(master=input_frame, textvariable=entry_float)
+button = ttk.Button(master=input_frame, text="Convert", command=convert)
+entry.pack(side="left", padx=10)
+button.pack(side="left")
+input_frame.pack(pady=10)
+
+# Output label
+output_string = tk.StringVar()
+output_label = ttk.Label(master=window, text="Output", font="Calibri 24", textvariable=output_string)
+output_label.pack(pady=5)
+
+
+# Run
+
+window.mainloop()
+
