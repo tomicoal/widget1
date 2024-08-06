@@ -1,6 +1,6 @@
 import tkinter as tk
-from tkinter import ttk
-
+# from tkinter import ttk
+import ttkbootstrap as ttk
 
 # Function
 
@@ -11,7 +11,7 @@ def convert():
 
 
 # create main window
-window = tk.Tk()
+window = ttk.Window(themename="litera")
 window.title("Demo")
 window.geometry("300x150")
 
@@ -35,6 +35,4 @@ output_label.pack(pady=5)
 
 
 # Run
-
 window.mainloop()
-
