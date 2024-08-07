@@ -2,6 +2,7 @@ import customtkinter as ctk
 # from random import  choice
 
 
+
 class SlidePanel(ctk.CTkFrame):
     def __init__(self, parent, start_pos, end_pos):
         super().__init__(master=parent)
