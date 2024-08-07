@@ -2,7 +2,6 @@ import customtkinter as ctk
 # from random import  choice
 
 
-
 class SlidePanel(ctk.CTkFrame):
     def __init__(self, parent, start_pos, end_pos):
         super().__init__(master=parent)
@@ -44,8 +43,6 @@ class SlidePanel(ctk.CTkFrame):
             print(self.pos)
             self.in_start_pos = True
 
-
-
 # functions
 
 # when click moves button to the right side of the window
@@ -68,8 +65,6 @@ class SlidePanel(ctk.CTkFrame):
 #         button_x += 3
 #         window.after(10, infinite_print)
 
-
-
 # window
 window = ctk.CTk()
 window.title('Animated Widgets')
@@ -77,12 +72,13 @@ window.geometry("600x400")
 # ctk.set_appearance_mode("light")
 
 
+
 # animated panel
 animated_panel = SlidePanel(window, 1, 0.7)
 ctk.CTkLabel(animated_panel, text="Label 1").pack(expand=True, fill="both", padx=2, pady=10)
 ctk.CTkLabel(animated_panel, text="Label 2").pack(expand=True, fill="both", padx=2, pady=10)
 ctk.CTkLabel(animated_panel, text="Label 3").pack(expand=True, fill="both", padx=2, pady=10)
-ctk.CTkTextbox(animated_panel, fg_color=("#dbdbdb","#2b2b2b")).pack(expand=True, fill="both", pady=10)
+ctk.CTkTextbox(animated_panel, fg_color=("#dbdbdb", "#2b2b2b")).pack(expand=True, fill="both", pady=10)
 
 # button
 button_x = 0.5
